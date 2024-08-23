@@ -20,6 +20,8 @@ public class Conversions
         //Add 2 more conversions, each both ways, to add choices 7, 8, 9, and 10.
         System.out.println("7. Miles to Kilometers");
         System.out.println("8. Kilometers to Miles");
+        System.out.println("9. Pounds to Grams");
+        System.out.println("10. Grams to Pounds");
         //You can add even more if you would like.
 
         int selection = keyboard.nextInt();
@@ -95,7 +97,25 @@ public class Conversions
             double kilometers = keyboard.nextDouble();
             keyboard.nextLine();
             double miles = kilometers/1.60934;
-            System.out.println(kilometers + " kilometerss is " + miles + " miles");
+            System.out.println(kilometers + " kilometers is " + miles + " miles");
+        }
+        if (selection == 9)
+        {
+            //Pounds to Grams
+            System.out.println("Enter Pounds: ");
+            double pounds = keyboard.nextDouble();
+            keyboard.nextLine();
+            double grams = pounds*453.592;
+            System.out.println(pounds + " pounds is " + grams + " grams");
+        }
+        if (selection == 10)
+        {
+            //Grams to Pounds
+            System.out.println("Enter Grams: ");
+            double grams = keyboard.nextDouble();
+            keyboard.nextLine();
+            double pounds = grams/453.592;
+            System.out.println(grams + " grams is " + pounds + " pounds");
         }
     }
 }
